@@ -1,0 +1,11 @@
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+outputs/
+data/
+*.rar
+*.docx
+.vscode/
+.idea/

@@ -1,0 +1,32 @@
+# Lexis Configuration - Winter 2026
+
+preprocessing:
+  case_folding: true
+  stemming: true
+  stopword_removal: true
+  min_token_len: 1
+
+indexing:
+  method: "spimi"  # spimi or bsbi
+  memory_limit_tokens: 50000
+  num_shards: 4
+  compression: "variable_byte"  # uncompressed, gap, variable_byte, gamma
+  skip_spacing: 8
+
+ranking:
+  title_weight: 0.3
+  body_weight: 0.7
+  length_normalization: true
+  use_idf: true
+  top_k: 10
+  champion_list_k: 50
+
+paths:
+  corpus_dir: "corpus"
+  index_dir: "outputs/index"
+  outputs_dir: "outputs"
+  train_queries: "queries_train.tsv"
+  test_queries: "queries_test.tsv"
+  qrels: "qrels.tsv"
+  boolean_tests: "boolean_tests.tsv"
+  misspellings: "misspellings.tsv"
